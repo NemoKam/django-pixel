@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/play.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    <title>Play</title>
+</head>
+<body>
+    {% block content %}
+        <p class="user">{{user}}</p>
+        {% if user.is_authenticated %}
+        <p class="time">00:00</p><p class="pos" >x:0 y:0</p>
+        <div class="table">
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="0" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="1" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="2" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="3" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="4" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="5" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="6" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="7" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="8" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="9" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="10" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="11" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="12" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="13" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="14" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="15" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="16" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="17" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="18" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="19" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="20" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="21" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="22" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="23" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="24" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="25" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="26" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="27" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="28" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="29" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="30" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="31" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="32" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="33" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="34" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="35" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="36" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="37" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="38" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="39" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="40" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="41" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="42" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="43" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="44" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="45" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="46" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="47" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="48" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="49" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="50" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="51" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="52" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="53" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="54" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="55" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="56" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="57" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="58" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="59" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="60" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="61" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="62" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="63" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="64" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="65" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="66" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="67" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="68" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="69" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="70" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="71" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="72" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="73" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="74" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="75" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="76" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="77" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="78" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="79" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="80" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="81" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="82" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="83" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="84" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="85" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="86" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="87" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="88" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="89" onclick="change(this.id);"></button></div>
+            </div>
+            <div class="tr">
+                <div class="td"><button class="colorbtn" id="90" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="91" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="92" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="93" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="94" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="95" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="96" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="97" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="98" onclick="change(this.id);"></button></div>
+                <div class="td"><button class="colorbtn" id="99" onclick="change(this.id);"></button></div>
+            </div>
+        </div>
+        <div class="colors">
+            <button class="white choose-color" onclick="changecolor('white')"></button>
+            <button class="red choose-color" onclick="changecolor('red')"></button>
+            <button class="orangered choose-color" onclick="changecolor('orangered')" ></button>
+            <button class="yellow choose-color" onclick="changecolor('yellow')"></button>
+            <button class="green choose-color" onclick="changecolor('green')"></button>
+            <button class="skyblue choose-color" onclick="changecolor('skyblue')" ></button>
+            <button class="blue choose-color" onclick="changecolor('blue')" ></button>
+            <button class="purple choose-color" onclick="changecolor('purple')"></button>
+            <button class="black choose-color" onclick="changecolor('black')"></button>
+        </div>
+        <div class="warning"></div>
+        {% endif %}
+        {% if user.is_authenticated == False %}
+        <p class="pos">Вы не вошли в систему</p>
+        {% endif %}
+        <p class="disconnect">Игра уже открыта в другой вкладке :)</p>
+        <script src="{% static 'js/play.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

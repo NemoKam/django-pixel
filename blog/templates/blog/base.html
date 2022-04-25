@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    <title>Post</title>
+</head>
+<body>
+    <header>
+        <a href="/">My blog with django</a>
+    </header>
+    <div class="user">
+        {% if user.is_authenticated %}
+        <p>{{ user }} </p>
+        <p>{{ request.COOKIES.lastpost}}</p>
+        {% else %}
+        <p><a href="/login">Войти</a></p>
+        {% endif %}
+    </div>
+    {% block content %}
+    {% endblock %}
+    <footer>
+
+    </footer>
+    <script>
+        let allCookies = document.cookie;
+        console.log(allCookies)
+    </script>
+</body>
+</html>

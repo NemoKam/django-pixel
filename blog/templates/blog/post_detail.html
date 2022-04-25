@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    <title>Post</title>
+</head>
+<body>
+    {% block content %}
+        <div class="post">
+            <h1 class="title_post"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p class="text_of_post">{{ post.text }}</p>
+            <br />
+            {% if post.published_date %}
+                <p class="published_time_post">{{ post.published_date }}</p>
+            {% endif %}
+            <p class="author_post">Author: {{ post.author }}</p>
+            {% if user == post.author %}
+            <a href="{% url 'post_edit' pk=post.pk %}">edit</a>
+            {% endif %}
+            {% if user.is_staff %}
+            <a href="{% url 'post_delete' pk=post.pk %}">delete</a>
+            {% endif %}
+        </div>
+    {% endblock %}
+</body>
+</html>

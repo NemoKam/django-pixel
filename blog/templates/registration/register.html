@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    <title>Register</title>
+</head>
+<body>
+    {% if user.is_authenticated == False %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        <input type="text" name="name" maxlength="16" required placeholder="Имя">
+        <input type="text" name="surname" maxlength="16" required placeholder="Фамилия">
+        <input type="text" name="username" maxlength="16" required placeholder="Username">
+        <input type="email" name="email" required placeholder="email">
+        <input type="password" name="password" maxlength="32" required placeholder="Пароль">
+        <button type="submit" class="save">Save</button>
+    </form>
+    {% else %}
+    <p>Вы уже зарегистрированы! <br />Ваш username: {{ user.get_username }}</p>
+    {% endif %}
+</body>
+</html>

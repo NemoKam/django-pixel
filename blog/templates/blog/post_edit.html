@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/post_edit.css' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    </head>
+    <h1>New post</h1>
+    {%  if user == post.author %}
+        <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    {%  endif
+        endif %}
+    {% elif post.author == null and user.is_authenticated %}
+    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    {% else %}
+    <p class="no-loginned">У тебя нет прав</p>
+    {% endif %}
+{% endblock %}
